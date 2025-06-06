@@ -1,240 +1,196 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SD FOAM INDUSTRIES</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f8f9fa, #e0eafc);
-      color: #333;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SD FOAM INDUSTRIES</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
 
-    .logo {
-      width: 150px;
-      margin: 20px auto;
-      display: block;
-    }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            min-height: 100vh;
+        }
 
-    .tabs {
-      display: flex;
-      justify-content: center;
-      background-color: #6a1b9a;
-      flex-wrap: wrap;
-    }
+        header {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-    .tabs button {
-      background-color: #6a1b9a;
-      border: none;
-      color: white;
-      padding: 14px 16px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
+        header img {
+            max-height: 120px;
+            margin-bottom: 10px;
+        }
 
-    .tabs button:hover, .tabs button.active {
-      background-color: #8e24aa;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+            color: #ffd700;
+        }
 
-    .tab-content {
-      display: none;
-      padding: 20px;
-      text-align: center;
-    }
+        header p {
+            font-size: 18px;
+        }
 
-    .tab-content.active {
-      display: block;
-    }
+        .contact-info {
+            text-align: center;
+            margin: 20px 0;
+        }
 
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #777;
-      text-align: center;
-    }
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
 
-    .gallery img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
+        .contact-info i {
+            margin-right: 10px;
+            color: #ffd700;
+        }
 
-    .whatsapp-bar {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      right: 10px;
-      background: white;
-      padding: 10px;
-      border-radius: 15px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: space-around;
-      align-items: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 999;
-    }
+        .section {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
 
-    .whatsapp-box {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 8px;
-      padding: 5px 10px;
-      border-radius: 10px;
-      background-color: #f0f0f0;
-    }
+        .section img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+        }
 
-    .whatsapp-icon {
-      width: 45px;
-      height: 45px;
-      font-size: 20px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
+        .section a.button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
 
-    .whatsapp-icon:hover {
-      transform: scale(1.1);
-    }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
 
-    .label {
-      font-size: 13px;
-      text-align: left;
-      line-height: 1.2;
-      color: #333;
-      max-width: 120px;
-    }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+        }
 
-    @media (max-width: 480px) {
-      .label {
-        font-size: 12px;
-      }
-    }
-  </style>
+        .contact-form button {
+            background-color: #ffd700;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-decoration: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.8);
+            font-size: 14px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+    <div class="overlay">
+        <header>
+            <!-- COMPANY LOGO -->
+            <img src="SD LOGO.jpeg" alt="SD FOAM INDUSTRIES Logo" />
+            <h1>SD FOAM INDUSTRIES</h1>
+            <p>Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+        </header>
 
-  <img src="SD LOGO.jpeg" alt="SD FOAM Logo" class="logo" />
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> sdfomindustries@gmail.com</p>
+            <p><i class="fas fa-phone"></i> 8950496914 (Office)</p>
+            <p><i class="fas fa-phone"></i> 8571042210 (Mr. Deepak Kumar)</p>
+            <p><i class="fas fa-phone"></i> 8368926021 (General Manager Mr. Dinesh Giri)</p>
+        </div>
 
-  <!-- Tabs -->
-  <div class="tabs">
-    <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
-    <button class="tab-link" onclick="openTab(event, 'about')">About</button>
-    <button class="tab-link" onclick="openTab(event, 'services')">Services</button>
-    <button class="tab-link" onclick="openTab(event, 'catalogue')">Catalogue</button>
-    <button class="tab-link" onclick="openTab(event, 'gallery')">Gallery</button>
-    <button class="tab-link" onclick="openTab(event, 'contact')">Contact</button>
-  </div>
+        <!-- Visiting Card -->
+        <div class="section">
+            <h2>Our Visiting Card</h2>
+            <img src="WhatsApp Image 2025-06-06 at 1.50.19 PM.jpeg" alt="Visiting Card" />
+        </div>
 
-  <!-- Tab Content -->
-  <div id="home" class="tab-content active">
-    <h1>Welcome to SD FOAM INDUSTRIES</h1>
-    <p>A trusted name in comfort and durability.</p>
-    <p>We manufacture PU Foam, Bonded Foam, Mattresses, and Fibre Pillows.</p>
-    <p>Quality, Durability & Timely Delivery Guaranteed.</p>
-  </div>
+        <!-- Factory / Product Photos -->
+        <div class="section">
+            <h2>Our Factory & Products</h2>
+            <img src="WhatsApp Image 2025-06-06 at 1.50.37 PM.jpeg" alt="Photo 1" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.36 PM.jpeg" alt="Photo 2" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM (1).jpeg" alt="Photo 3" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM.jpeg" alt="Photo 4" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.33 PM.jpeg" alt="Photo 5" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM (1).jpeg" alt="Photo 6" />
+            <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM.jpeg" alt="Photo 7" />
+        </div>
 
-  <div id="about" class="tab-content">
-    <h2>About Us</h2>
-    <p>SD FOAM INDUSTRIES is a trusted name in comfort and durability, delivering premium quality foam products across India with a strong commitment to quality and customer satisfaction.</p>
-  </div>
+        <!-- PDF Download -->
+        <div class="section">
+            <h2>Download Our Catalogue</h2>
+            <a class="button" href="01 Catalogue (3).pdf" target="_blank">Download PDF</a>
+        </div>
 
-  <div id="services" class="tab-content">
-    <h2>Our Services</h2>
-    <ul style="text-align: left; display: inline-block;">
-      <li>PU Foam Manufacturing</li>
-      <li>Bonded Foam Manufacturing</li>
-      <li>Mattresses</li>
-      <li>Fibre Pillows</li>
-      <li>Custom Orders</li>
-    </ul>
-  </div>
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form action="mailto:sdfomindustries@gmail.com" method="post" enctype="text/plain">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
 
-  <div id="catalogue" class="tab-content">
-    <h2>Catalogue</h2>
-    <p><a href="01 Catalogue (3).pdf" target="_blank">Download Catalogue (PDF)</a></p>
-    <iframe src="01 Catalogue (3).pdf" width="90%" height="500px" style="border: none;"></iframe>
-  </div>
+        <!-- WhatsApp Floating Button -->
+        <a class="whatsapp-button" href="https://wa.me/918950496914" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
 
-  <div id="gallery" class="tab-content gallery">
-    <h2>Product Gallery</h2>
-    <img src="WhatsApp Image 2025-06-06 at 1.50.31 PM.jpeg" alt="Gallery Image 1" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.29 PM.jpeg" alt="Gallery Image 2" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM.jpeg" alt="Gallery Image 3" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM (1).jpeg" alt="Gallery Image 4" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.33 PM.jpeg" alt="Gallery Image 5" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM.jpeg" alt="Gallery Image 6" />
-    <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM (1).jpeg" alt="Gallery Image 7" />
-  </div>
-
-  <div id="contact" class="tab-content">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong><br>
-    S D FOAM INDUSTRIES<br>
-    Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
-
-    <p><strong>Emails:</strong><br>
-    sdf​oamindustries@gmail.com<br>
-    deepakkumar0653@gmail.com</p>
-
-    <p><strong>Phones:</strong><br>
-    Office — 8950496914<br>
-    Mr. Deepak Kumar — 8571042210<br>
-    GM Mr. Dinesh Giri — 8368926021<br>
-    Sr. Sales Manager Mr. Pawan — 7347683905</p>
-  </div>
-
-  <!-- WhatsApp Buttons -->
-  <div class="whatsapp-bar">
-    <div class="whatsapp-box">
-      <a href="https://wa.me/918950496914" target="_blank" class="whatsapp-icon" title="Office">💬</a>
-      <div class="label">Office</div>
+        <footer>
+            &copy; 2025 SD FOAM INDUSTRIES. All Rights Reserved.
+        </footer>
     </div>
-    <div class="whatsapp-box">
-      <a href="https://wa.me/918571042210" target="_blank" class="whatsapp-icon" title="Mr. Deepak Kumar">💬</a>
-      <div class="label">Mr. Deepak Kumar</div>
-    </div>
-    <div class="whatsapp-box">
-      <a href="https://wa.me/918368926021" target="_blank" class="whatsapp-icon" title="GM Mr. Dinesh Giri">💬</a>
-      <div class="label">GM Mr. Dinesh Giri</div>
-    </div>
-    <div class="whatsapp-box">
-      <a href="https://wa.me/917347683905" target="_blank" class="whatsapp-icon" title="Sr. Sales Manager Mr. Pawan">💬</a>
-      <div class="label">Sr. Sales Manager Mr. Pawan</div>
-    </div>
-  </div>
-
-  <div class="footer">
-    &copy; 2025 SD FOAM INDUSTRIES. All rights reserved.
-  </div>
-
-  <script>
-    function openTab(evt, tabName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tab-content");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.remove("active");
-      }
-      tablinks = document.getElementsByClassName("tab-link");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-      document.getElementById(tabName).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-  </script>
 </body>
 </html>
