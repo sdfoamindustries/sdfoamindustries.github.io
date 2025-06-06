@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SD FOAM INDUSTRIES</title>
   <style>
     body {
@@ -10,39 +10,60 @@
       font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(to right, #f8f9fa, #e0eafc);
       color: #333;
-      text-align: center;
-      padding: 20px;
     }
 
     .logo {
       width: 150px;
-      margin-top: 30px;
+      margin: 20px auto;
+      display: block;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      color: #6a1b9a;
-      margin-top: 20px;
+    .tabs {
+      display: flex;
+      justify-content: center;
+      background-color: #6a1b9a;
+      flex-wrap: wrap;
     }
 
-    p {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 10px auto;
-      line-height: 1.6;
+    .tabs button {
+      background-color: #6a1b9a;
+      border: none;
+      color: white;
+      padding: 14px 16px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
     }
 
-    .section {
-      margin-top: 40px;
+    .tabs button:hover, .tabs button.active {
+      background-color: #8e24aa;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .tab-content.active {
+      display: block;
     }
 
     .footer {
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 0.9rem;
       color: #777;
+      text-align: center;
     }
 
-    /* WhatsApp Section */
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
     .whatsapp-bar {
       position: fixed;
       bottom: 10px;
@@ -106,20 +127,74 @@
 </head>
 <body>
 
-  <img src="logo.jpg" alt="SD FOAM Logo" class="logo" />
+  <img src="SD LOGO.jpeg" alt="SD FOAM Logo" class="logo" />
 
-  <h1>Welcome to SD FOAM INDUSTRIES</h1>
-  <p>A trusted name in comfort and durability.</p>
-  <p>We manufacture PU Foam, Bonded Foam, Mattresses, and Fibre Pillows.</p>
-  <p>Quality, Durability & Timely Delivery Guaranteed.</p>
-
-  <div class="section">
-    <h2>🛏️ Mattress MRP</h2>
-    <p><em>Our detailed MRP list will be updated here soon.</em></p>
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
+    <button class="tab-link" onclick="openTab(event, 'about')">About</button>
+    <button class="tab-link" onclick="openTab(event, 'services')">Services</button>
+    <button class="tab-link" onclick="openTab(event, 'catalogue')">Catalogue</button>
+    <button class="tab-link" onclick="openTab(event, 'gallery')">Gallery</button>
+    <button class="tab-link" onclick="openTab(event, 'contact')">Contact</button>
   </div>
 
-  <div class="footer">
-    &copy; 2025 SD FOAM INDUSTRIES. All rights reserved.
+  <!-- Tab Content -->
+  <div id="home" class="tab-content active">
+    <h1>Welcome to SD FOAM INDUSTRIES</h1>
+    <p>A trusted name in comfort and durability.</p>
+    <p>We manufacture PU Foam, Bonded Foam, Mattresses, and Fibre Pillows.</p>
+    <p>Quality, Durability & Timely Delivery Guaranteed.</p>
+  </div>
+
+  <div id="about" class="tab-content">
+    <h2>About Us</h2>
+    <p>SD FOAM INDUSTRIES is a trusted name in comfort and durability, delivering premium quality foam products across India with a strong commitment to quality and customer satisfaction.</p>
+  </div>
+
+  <div id="services" class="tab-content">
+    <h2>Our Services</h2>
+    <ul style="text-align: left; display: inline-block;">
+      <li>PU Foam Manufacturing</li>
+      <li>Bonded Foam Manufacturing</li>
+      <li>Mattresses</li>
+      <li>Fibre Pillows</li>
+      <li>Custom Orders</li>
+    </ul>
+  </div>
+
+  <div id="catalogue" class="tab-content">
+    <h2>Catalogue</h2>
+    <p><a href="01 Catalogue (3).pdf" target="_blank">Download Catalogue (PDF)</a></p>
+    <iframe src="01 Catalogue (3).pdf" width="90%" height="500px" style="border: none;"></iframe>
+  </div>
+
+  <div id="gallery" class="tab-content gallery">
+    <h2>Product Gallery</h2>
+    <img src="WhatsApp Image 2025-06-06 at 1.50.31 PM.jpeg" alt="Gallery Image 1" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.29 PM.jpeg" alt="Gallery Image 2" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM.jpeg" alt="Gallery Image 3" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.32 PM (1).jpeg" alt="Gallery Image 4" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.33 PM.jpeg" alt="Gallery Image 5" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM.jpeg" alt="Gallery Image 6" />
+    <img src="WhatsApp Image 2025-06-06 at 1.50.35 PM (1).jpeg" alt="Gallery Image 7" />
+  </div>
+
+  <div id="contact" class="tab-content">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong><br>
+    S D FOAM INDUSTRIES<br>
+    Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+
+    <p><strong>Emails:</strong><br>
+    sdf​oamindustries@gmail.com<br>
+    deepakkumar0653@gmail.com</p>
+
+    <p><strong>Phones:</strong><br>
+    Office — 8950496914<br>
+    Mr. Deepak Kumar — 8571042210<br>
+    GM Mr. Dinesh Giri — 8368926021<br>
+    Sr. Sales Manager Mr. Pawan — 7347683905</p>
   </div>
 
   <!-- WhatsApp Buttons -->
@@ -137,10 +212,29 @@
       <div class="label">GM Mr. Dinesh Giri</div>
     </div>
     <div class="whatsapp-box">
-      <a href="https://wa.me/917347683905" target="_blank" class="whatsapp-icon" title="Mr. Pawan (Sr. Salesman)">💬</a>
-      <div class="label">Mr. Pawan<br>(Sr. Salesman)</div>
+      <a href="https://wa.me/917347683905" target="_blank" class="whatsapp-icon" title="Sr. Sales Manager Mr. Pawan">💬</a>
+      <div class="label">Sr. Sales Manager Mr. Pawan</div>
     </div>
   </div>
 
+  <div class="footer">
+    &copy; 2025 SD FOAM INDUSTRIES. All rights reserved.
+  </div>
+
+  <script>
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tab-content");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+      }
+      tablinks = document.getElementsByClassName("tab-link");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+      }
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
 </body>
 </html>
