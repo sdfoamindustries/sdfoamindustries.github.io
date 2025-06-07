@@ -3,206 +3,99 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SD FOAM INDUSTRIES</title>
+    <title>SD Foam Industries</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-        }
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            min-height: 100vh;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header img {
-            max-height: 120px;
-            margin-bottom: 10px;
-        }
-
-        header h1 {
+            background-color: #f2f2f2; /* light grey background */
             margin: 0;
-            font-size: 36px;
-            color: #ffd700;
+            padding: 0;
         }
-
-        header p {
-            font-size: 18px;
-        }
-
-        .contact-info {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-
-        .contact-info a {
-            color: #ffd700;
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
-            max-width: 1000px;
-            margin: 20px auto;
-            background: rgba(255, 255, 255, 0.1);
+        header {
+            background-color: #004080; /* dark blue */
             padding: 20px;
-            border-radius: 8px;
             text-align: center;
+            color: white;
         }
-
-        .section img {
-            max-width: 100%;
+        header img {
+            max-width: 150px;
             height: auto;
-            margin: 10px;
-            border-radius: 8px;
         }
-
-        .section a.button {
-            display: inline-block;
-            background-color: #ffd700;
-            color: #000;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
+        main {
             padding: 20px;
-            border-radius: 8px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 5px;
         }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: none;
+        h1 {
+            color: #004080;
+        }
+        a.pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #008000;
+            color: white;
+            text-decoration: none;
             border-radius: 4px;
         }
-
-        .contact-form button {
-            background-color: #ffd700;
-            color: #000;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+        a.pdf-link:hover {
+            background-color: #005900;
         }
-
+        .contact-info {
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
         .whatsapp-button {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
             border-radius: 50%;
             width: 60px;
             height: 60px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 30px;
-            text-decoration: none;
+            justify-content: center;
             box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+            cursor: pointer;
+            z-index: 1000;
         }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            font-size: 14px;
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <div class="overlay">
-        <header>
-            <!-- COMPANY LOGO -->
-            <img src="images/sd-logo.jpeg" alt="SD FOAM INDUSTRIES Logo" />
-            <h1>SD FOAM INDUSTRIES</h1>
-            <p>Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
-        </header>
 
-        <div class="contact-info">
-            <p><i class="fas fa-phone"></i> <a href="tel:+918950496914">8950496914 (Office)</a> | <a href="https://wa.me/918950496914" target="_blank">WhatsApp</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+918571042210">8571042210 (Mr. Deepak Kumar)</a> | <a href="https://wa.me/918571042210" target="_blank">WhatsApp</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+918368926021">8368926021 (General Manager Mr. Dinesh Giri)</a> | <a href="https://wa.me/918368926021" target="_blank">WhatsApp</a></p>
-            <p><i class="fas fa-phone"></i> <a href="tel:+917347683905">7347683905 (SR SALES MANAGER Mr. Pawan)</a> | <a href="https://wa.me/917347683905" target="_blank">WhatsApp</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
-        </div>
+<header>
+    <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+</header>
 
-        <!-- About Us -->
-        <div class="section">
-            <h2>About Us</h2>
-            <p>SD FOAM INDUSTRIES is a leading manufacturer of high-quality foam products based in Sirsa, Haryana. We provide innovative foam solutions for packaging, furniture, bedding, and more. Our focus is on quality, reliability, and customer satisfaction.</p>
-        </div>
+<main>
+    <h1>Welcome to SD Foam Industries</h1>
+    <p>Your trusted manufacturer of quality foam products.</p>
+    
+    <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF</a>
 
-        <!-- Visiting Card -->
-        <div class="section">
-            <h2>Our Visiting Card</h2>
-            <img src="images/product1.jpeg" alt="Visiting Card" />
-        </div>
-
-        <!-- Factory / Product Photos -->
-        <div class="section">
-            <h2>Our Factory & Products</h2>
-            <img src="images/product2.jpeg" alt="Product 1" />
-            <img src="images/product3.jpeg" alt="Product 2" />
-            <img src="images/product4.jpeg" alt="Product 3" />
-            <img src="images/product5.jpeg" alt="Product 4" />
-            <img src="images/product6.jpeg" alt="Product 5" />
-            <img src="images/product7.jpeg" alt="Product 6" />
-            <img src="images/product8.jpeg" alt="Product 7" />
-            <img src="images/product9.jpeg" alt="Product 8" />
-        </div>
-
-        <!-- PDF Download -->
-        <div class="section">
-            <h2>Download Our Catalogue</h2>
-            <a class="button" href="pdf/catalogue.pdf" target="_blank">Download PDF</a>
-        </div>
-
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Contact Us</h2>
-            <form action="mailto:sdfoamindustries@gmail.com" method="post" enctype="text/plain">
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-
-        <!-- WhatsApp Floating Button -->
-        <a class="whatsapp-button" href="https://wa.me/918950496914" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-
-        <footer>
-            &copy; 2025 SD FOAM INDUSTRIES. All Rights Reserved.
-        </footer>
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+        <p>Email: <a href="mailto:sdf oamindustries@gmail.com">sdf oamindustries@gmail.com</a></p>
+        <p>Phone (Office): 8950496914</p>
+        <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
+        <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
     </div>
+</main>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/8950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
 </body>
 </html>
