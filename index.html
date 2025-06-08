@@ -1,123 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SD Foam Industries</title>
-
-<style>
-  /* Background with foam/mattress style pattern */
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('https://images.unsplash.com/photo-1581092333868-4c40f16557f9?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
-    background-size: cover;
-    color: #222;
-  }
-
-  /* Overlay to darken background for better readability */
-  body::before {
-    content: "";
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -1;
-  }
-
-  header {
-    background-color: rgba(0, 64, 128, 0.8);
-    padding: 20px;
-    text-align: center;
-    color: white;
-  }
-  header img {
-    max-width: 160px;
-    height: auto;
-  }
-
-  main {
-    max-width: 800px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  }
-
-  h1 {
-    color: #004080;
-    margin-top: 0;
-  }
-
-  a.pdf-link {
-    display: inline-block;
-    margin: 20px 0 0;
-    padding: 12px 20px;
-    background-color: #008000;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-
-  a.pdf-link:hover {
-    background-color: #005900;
-  }
-
-  .contact-info {
-    margin-top: 30px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #222;
-  }
-  .contact-info a {
-    color: #004080;
-    text-decoration: none;
-  }
-  .contact-info a:hover {
-    text-decoration: underline;
-  }
-
-  /* WhatsApp floating button */
-  .whatsapp-button {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25D366;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    cursor: pointer;
-    z-index: 1000;
-    transition: background-color 0.3s ease;
-  }
-  .whatsapp-button:hover {
-    background-color: #1ebe57;
-  }
-  .whatsapp-button img {
-    width: 35px;
-    height: 35px;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 600px) {
-    main {
-      margin: 20px 15px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SD Foam Industries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1580582935559-4a0b28ec9b26?auto=format&fit=crop&w=1350&q=80'); /* Foam/mattress related */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background-color: rgba(0, 64, 128, 0.8); /* semi-transparent dark blue */
       padding: 20px;
+      text-align: center;
+      color: white;
     }
     header img {
-      max-width: 120px;
+      max-width: 150px;
+      height: auto;
     }
-  }
-</style>
+    main {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    h1 {
+      color: #004080;
+      margin-top: 0;
+    }
+    a.pdf-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #008000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    a.pdf-link:hover {
+      background-color: #005900;
+    }
+    .contact-info {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .contact-info a {
+      color: #004080;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    /* WhatsApp floating button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      cursor: pointer;
+      z-index: 1000;
+    }
+    .whatsapp-button img {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
@@ -126,24 +92,22 @@
 
 <main>
   <h1>Welcome to SD Foam Industries</h1>
-  <p>Your trusted manufacturer of high-quality foam products and mattresses.</p>
+  <p>Your trusted manufacturer of quality foam products.</p>
   
-  <a href="assets/product1.pdf" target="_blank" class="pdf-link" aria-label="Download Product PDF">
-    Download Product PDF
-  </a>
-
+  <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF</a>
+  
   <div class="contact-info">
     <h2>Contact Us</h2>
     <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
     <p>Email: <a href="mailto:sdf oamindustries@gmail.com">sdf oamindustries@gmail.com</a></p>
-    <p>Phone (Office): 8950496914</p>
-    <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
-    <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
+    <p>Phone (Office): <a href="tel:8950496914">8950496914</a> | WhatsApp: <a href="https://wa.me/918950496914" target="_blank" rel="noopener noreferrer">8950496914</a></p>
+    <p>Mobile (Mr. Deepak Kumar): <a href="tel:8571042210">8571042210</a> | WhatsApp: <a href="https://wa.me/918571042210" target="_blank" rel="noopener noreferrer">8571042210</a></p>
+    <p>General Manager (Mr. Dinesh Giri): <a href="tel:8368926021">8368926021</a> | WhatsApp: <a href="https://wa.me/918368926021" target="_blank" rel="noopener noreferrer">8368926021</a></p>
   </div>
 </main>
 
 <!-- WhatsApp floating button -->
-<a href="https://wa.me/8950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/918950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
 
