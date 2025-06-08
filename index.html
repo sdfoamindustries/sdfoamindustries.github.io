@@ -7,36 +7,41 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background: url('assets/background.jpg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
+            color: #fff;
         }
         header {
-            background-color: #004080;
+            background-color: rgba(0, 64, 128, 0.8);
             padding: 20px;
             text-align: center;
-            color: white;
         }
         header img {
             max-width: 150px;
             height: auto;
         }
         main {
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             max-width: 800px;
             margin: 20px auto;
-            background: white;
-            box-shadow: 0 0 10px #ccc;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #000;
         }
-        h1 {
-            color: #004080;
+        h1, h2 {
+            color: #00ffff;
             text-align: center;
+        }
+        p {
+            line-height: 1.6;
+            color: #fff;
         }
         a.pdf-link {
             display: inline-block;
             margin-top: 15px;
-            padding: 12px 18px;
+            padding: 12px 20px;
             background-color: #008000;
             color: white;
             text-decoration: none;
@@ -51,11 +56,13 @@
             margin-top: 30px;
             font-size: 16px;
             line-height: 1.7;
-            color: #333;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
         }
-        .contact-info h2 {
-            color: #004080;
-            margin-bottom: 10px;
+        .contact-info a {
+            color: #00ffff;
+            text-decoration: underline;
         }
         .whatsapp-button {
             position: fixed;
@@ -87,10 +94,12 @@
 <main>
     <h1>Welcome to SD Foam Industries</h1>
     <p style="text-align: center;">Your trusted manufacturer of quality foam products.</p>
-    
+
     <!-- PDF Download Button -->
     <div style="text-align: center;">
-        <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF</a>
+        <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF 1</a>
+        <br><br>
+        <a href="assets/product2.pdf" target="_blank" class="pdf-link">Download Product PDF 2</a>
     </div>
 
     <!-- Contact Info -->
@@ -98,9 +107,9 @@
         <h2>Contact Us</h2>
         <p><strong>Address:</strong> Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
         <p><strong>Email:</strong> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
-        <p><strong>Phone (Office):</strong> 8950496914</p>
-        <p><strong>Mobile (Mr. Deepak Kumar):</strong> 8571042210</p>
-        <p><strong>General Manager (Mr. Dinesh Giri):</strong> 8368926021</p>
+        <p><strong>Phone (Office):</strong> <a href="tel:8950496914">8950496914</a></p>
+        <p><strong>Mobile (Mr. Deepak Kumar):</strong> <a href="tel:8571042210">8571042210</a></p>
+        <p><strong>General Manager (Mr. Dinesh Giri):</strong> <a href="tel:8368926021">8368926021</a></p>
     </div>
 </main>
 
