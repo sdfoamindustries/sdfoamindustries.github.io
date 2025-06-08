@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -7,12 +7,12 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2; /* light grey background */
+            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #004080; /* dark blue */
+            background-color: #004080;
             padding: 20px;
             text-align: center;
             color: white;
@@ -24,22 +24,25 @@
         main {
             padding: 20px;
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto;
             background: white;
             box-shadow: 0 0 10px #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
         }
         h1 {
             color: #004080;
+            text-align: center;
         }
         a.pdf-link {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 15px;
+            padding: 12px 18px;
             background-color: #008000;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         a.pdf-link:hover {
             background-color: #005900;
@@ -47,7 +50,12 @@
         .contact-info {
             margin-top: 30px;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #333;
+        }
+        .contact-info h2 {
+            color: #004080;
+            margin-bottom: 10px;
         }
         .whatsapp-button {
             position: fixed;
@@ -73,28 +81,32 @@
 <body>
 
 <header>
-    <img src="assets/logo.png" alt="Logo" />
+    <img src="assets/logo.png" alt="SD Foam Industries Logo" />
 </header>
 
 <main>
     <h1>Welcome to SD Foam Industries</h1>
-    <p>Your trusted manufacturer of quality foam products.</p>
+    <p style="text-align: center;">Your trusted manufacturer of quality foam products.</p>
     
-   <a href="assets/product1.pdf" target="_blank">Download Product PDF</a>
+    <!-- PDF Download Button -->
+    <div style="text-align: center;">
+        <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF</a>
+    </div>
 
+    <!-- Contact Info -->
     <div class="contact-info">
         <h2>Contact Us</h2>
-        <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
-        <p>Email: <a href="mailto:sdf oamindustries@gmail.com">sdf oamindustries@gmail.com</a></p>
-        <p>Phone (Office): 8950496914</p>
-        <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
-        <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
+        <p><strong>Address:</strong> Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+        <p><strong>Email:</strong> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
+        <p><strong>Phone (Office):</strong> 8950496914</p>
+        <p><strong>Mobile (Mr. Deepak Kumar):</strong> 8571042210</p>
+        <p><strong>General Manager (Mr. Dinesh Giri):</strong> 8368926021</p>
     </div>
 </main>
 
-<!-- WhatsApp floating button -->
+<!-- WhatsApp Floating Button -->
 <a href="https://wa.me/8950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
 </a>
 
 </body>
