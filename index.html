@@ -7,47 +7,40 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('assets/background.jpg') no-repeat center center fixed;
-            background-size: cover;
             margin: 0;
             padding: 0;
-            color: #fff;
+            background: url('assets/background.jpg') no-repeat center center fixed;
+            background-size: cover;
         }
         header {
             background-color: rgba(0, 64, 128, 0.8);
             padding: 20px;
             text-align: center;
+            color: white;
         }
         header img {
             max-width: 150px;
             height: auto;
         }
         main {
-            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             max-width: 800px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #000;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px #ccc;
+            border-radius: 8px;
         }
-        h1, h2 {
-            color: #00ffff;
-            text-align: center;
-        }
-        p {
-            line-height: 1.6;
-            color: #fff;
+        h1 {
+            color: #004080;
         }
         a.pdf-link {
             display: inline-block;
             margin-top: 15px;
-            padding: 12px 20px;
+            padding: 10px 15px;
             background-color: #008000;
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
         }
         a.pdf-link:hover {
             background-color: #005900;
@@ -55,14 +48,7 @@
         .contact-info {
             margin-top: 30px;
             font-size: 16px;
-            line-height: 1.7;
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 8px;
-        }
-        .contact-info a {
-            color: #00ffff;
-            text-decoration: underline;
+            line-height: 1.6;
         }
         .whatsapp-button {
             position: fixed;
@@ -88,34 +74,32 @@
 <body>
 
 <header>
-    <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+    <img src="assets/logo.png" alt="Logo" />
 </header>
 
 <main>
     <h1>Welcome to SD Foam Industries</h1>
-    <p style="text-align: center;">Your trusted manufacturer of quality foam products.</p>
+    <p>Your trusted manufacturer of quality foam products.</p>
 
-    <!-- PDF Download Button -->
-    <div style="text-align: center;">
-        <a href="assets/product1.pdf" target="_blank" class="pdf-link">Download Product PDF 1</a>
-        <br><br>
-        <a href="assets/product2.pdf" target="_blank" class="pdf-link">Download Product PDF 2</a>
-    </div>
+    <!-- PDF Download Links -->
+    <a href="assets/product1.pdf" class="pdf-link" target="_blank">Download Product PDF 1</a>
+    <br>
+    <a href="assets/product2.pdf" class="pdf-link" target="_blank">Download Product PDF 2</a>
 
-    <!-- Contact Info -->
+    <!-- Contact Information -->
     <div class="contact-info">
         <h2>Contact Us</h2>
-        <p><strong>Address:</strong> Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
-        <p><strong>Email:</strong> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
-        <p><strong>Phone (Office):</strong> <a href="tel:8950496914">8950496914</a></p>
-        <p><strong>Mobile (Mr. Deepak Kumar):</strong> <a href="tel:8571042210">8571042210</a></p>
-        <p><strong>General Manager (Mr. Dinesh Giri):</strong> <a href="tel:8368926021">8368926021</a></p>
+        <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+        <p>Email: <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
+        <p>Phone (Office): 8950496914</p>
+        <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
+        <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
     </div>
 </main>
 
-<!-- WhatsApp Floating Button -->
+<!-- WhatsApp floating button -->
 <a href="https://wa.me/8950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
 </a>
 
 </body>
