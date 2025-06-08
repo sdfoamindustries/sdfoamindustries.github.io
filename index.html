@@ -1,155 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SD Foam Industries</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SD Foam Industries</title>
 
-  <style>
-    /* Background image with overlay */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url('assets/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-      min-height: 100vh;
-      color: #fff;
-    }
+<style>
+  /* Background with foam/mattress style pattern */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1581092333868-4c40f16557f9?auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+    background-size: cover;
+    color: #222;
+  }
 
-    /* Dark overlay for better text visibility */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
+  /* Overlay to darken background for better readability */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
 
-    header {
-      background-color: rgba(0, 64, 128, 0.8);
-      padding: 15px;
-      text-align: center;
-      border-bottom: 3px solid #00cc44;
-    }
+  header {
+    background-color: rgba(0, 64, 128, 0.8);
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
+  header img {
+    max-width: 160px;
+    height: auto;
+  }
 
-    header img {
-      max-width: 180px;
-      height: auto;
-    }
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
 
+  h1 {
+    color: #004080;
+    margin-top: 0;
+  }
+
+  a.pdf-link {
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 12px 20px;
+    background-color: #008000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+
+  a.pdf-link:hover {
+    background-color: #005900;
+  }
+
+  .contact-info {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+  }
+  .contact-info a {
+    color: #004080;
+    text-decoration: none;
+  }
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+
+  /* WhatsApp floating button */
+  .whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  .whatsapp-button:hover {
+    background-color: #1ebe57;
+  }
+  .whatsapp-button img {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
     main {
-      background-color: rgba(0, 0, 0, 0.6);
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 30px 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px #00cc44;
+      margin: 20px 15px;
+      padding: 20px;
     }
-
-    h1 {
-      margin-top: 0;
-      color: #00cc44;
-      font-weight: 700;
-      font-size: 2.5rem;
-      text-align: center;
+    header img {
+      max-width: 120px;
     }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    a.pdf-link {
-      display: inline-block;
-      margin: 15px 0 25px 0;
-      padding: 12px 22px;
-      background-color: #00cc44;
-      color: #000;
-      font-weight: 700;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background-color 0.3s ease;
-    }
-
-    a.pdf-link:hover {
-      background-color: #009933;
-      color: white;
-    }
-
-    .contact-info h2 {
-      color: #00cc44;
-      margin-bottom: 12px;
-      font-weight: 700;
-      text-align: center;
-    }
-
-    .contact-info p, .contact-info a {
-      color: #fff;
-      font-size: 1rem;
-      margin: 5px 0;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-button {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25D366;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-      cursor: pointer;
-      z-index: 10000;
-      transition: background-color 0.3s ease;
-    }
-
-    .whatsapp-button:hover {
-      background-color: #1DA851;
-    }
-
-    .whatsapp-button img {
-      width: 32px;
-      height: 32px;
-    }
-  </style>
+  }
+</style>
 </head>
 
 <body>
-  <header>
-    <img src="assets/logo.png" alt="SD Foam Industries Logo" />
-  </header>
 
-  <main>
-    <h1>Welcome to SD Foam Industries</h1>
-    <p>Your trusted manufacturer of quality foam and mattress products.</p>
+<header>
+  <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+</header>
 
-    <a href="assets/product1.pdf" target="_blank" class="pdf-link" download>Download Product PDF</a>
-
-    <div class="contact-info">
-      <h2>Contact Us</h2>
-      <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
-      <p>Email: <a href="mailto:sdf oamindustries@gmail.com">sdf oamindustries@gmail.com</a></p>
-      <p>Phone (Office): 8950496914</p>
-      <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
-      <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
-    </div>
-  </main>
-
-  <a href="https://wa.me/8950496914" target="_blank" aria-label="Chat on WhatsApp" class="whatsapp-button">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon" />
+<main>
+  <h1>Welcome to SD Foam Industries</h1>
+  <p>Your trusted manufacturer of high-quality foam products and mattresses.</p>
+  
+  <a href="assets/product1.pdf" target="_blank" class="pdf-link" aria-label="Download Product PDF">
+    Download Product PDF
   </a>
+
+  <div class="contact-info">
+    <h2>Contact Us</h2>
+    <p>Address: Mangala to Sahidawali Road, Village Mangala, Sirsa-125055 (Haryana)</p>
+    <p>Email: <a href="mailto:sdf oamindustries@gmail.com">sdf oamindustries@gmail.com</a></p>
+    <p>Phone (Office): 8950496914</p>
+    <p>Mobile (Mr. Deepak Kumar): 8571042210</p>
+    <p>General Manager (Mr. Dinesh Giri): 8368926021</p>
+  </div>
+</main>
+
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/8950496914" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+
 </body>
 </html>
