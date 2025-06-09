@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SD Foam Industries</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.6);
+      z-index: -1;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    /* Header + Navigation */
+    header {
+      background: rgba(0,64,128,0.9);
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+    }
+    .logo-title {
+      display: flex;
+      align-items: center;
+    }
+    .logo-title img {
+      height: 60px;
+      width: auto;
+    }
+    .logo-title span {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      margin-left: 12px;
+    }
+    nav a {
+      margin: 0 12px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    /* Main Content Wrapper */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+    section {
+      margin-bottom: 60px;
+    }
+    h1, h2 {
+      color: #004080;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    /* PDF Button */
+    .pdf-link {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 12px 20px;
+      background: #008000;
+      color: #fff;
+      font-weight: bold;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .pdf-link:hover { background: #005900; }
+
+    /* Contact Info */
+    .contact-info {
+      font-size: 16px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact-info a { color: #004080; }
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+    }
+    .whatsapp-button img { width: 35px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-title">
+    <img src="assets/logo.png" alt="SD Foam Industries Logo">
+    <span>S D FOAM INDUSTRIES</span>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home">
+    <h1>Welcome to SD Foam Industries</h1>
+    <p style="text-align:center;">Leading manufacturer of quality PU foam & mattress products.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>SD Foam Industries, based in Sirsa, Haryana, is a trusted name in PU foam and mattress manufacturing across India. With cutting-edge production facilities and a passion for comfort, we deliver premium PU foam and mattress solutions tailored to your needs. Our expertise ensures home-grade as well as industrial-grade products known for resilience, ergonomic support, and durability.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul style="max-width:600px; margin:auto; list-style: none; padding:0;">
+      <li>✔️ All‑India Delivery Network</li>
+      <li>✔️ Premium Quality Assurance</li>
+      <li>✔️ Excellent Customer Support</li>
+      <li>✔️ Trusted Goodwill in Markets</li>
+      <li>✔️ Professional Conduct & Timely Service</li>
+      <li>✔️ Competitive Pricing</li>
+    </ul>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="assets/image1.jpg" alt="Product 1">
+      <img src="assets/image2.jpg" alt="Product 2">
+      <img src="assets/image3.jpg" alt="Product 3">
+      <img src="assets/image4.jpg" alt="Product 4">
+      <img src="assets/image7.jpg" alt="Product 5">
+      <img src="assets/image8.jpg" alt="Product 6">
+      <img src="assets/image14.jpg" alt="Product 7">
+      <img src="assets/mattress_hd.jpg" alt="HD Mattress">
+    </div>
+    <p style="text-align:center;">
+      <a href="assets/product1.pdf" class="pdf-link" target="_blank">Download Our Catalogue</a>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>Address:</strong> Mangala to Sahidawali Road, Village Mangala, Sirsa‑125055 (Haryana)</p>
+      <p><strong>Email:</strong> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
+      <p><strong>Office:</strong> <a href="tel:8950496914">8950496914</a> | <a href="https://wa.me/918950496914">WhatsApp</a></p>
+      <p><strong>Mr. Deepak Kumar:</strong> <a href="tel:8571042210">8571042210</a> | <a href="https://wa.me/918571042210">WhatsApp</a></p>
+      <p><strong>GM Mr. Dinesh Giri:</strong> <a href="tel:8368926021">8368926021</a> | <a href="https://wa.me/918368926021">WhatsApp</a></p>
+      <p><strong>Sr. Salesman Mr. Pawan:</strong> <a href="tel:7447683905">7447683905</a> | <a href="https://wa.me/917447683905">WhatsApp</a></p>
+    </div>
+  </section>
+</main>
+
+<a href="https://wa.me/918950496914" target="_blank" class="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat on WhatsApp">
+</a>
+
+</body>
+</html>
+SD-Foam-Industries/
+├── index.html
+└── assets/
+     ├── logo.png             ← transparent PNG logo
+     ├── background.jpg       ← selected background (girl sleeping)
+     ├── image1.jpg          ← gallery image 1
+     ├── image2.jpg
+     ├── image3.jpg
+     ├── image4.jpg
+     ├── image7.jpg
+     ├── image8.jpg
+     ├── image14.jpg
+     ├── mattress_hd.jpg      ← extra HD mattress shot
+     └── product1.pdf        ← your catalogue PDF
