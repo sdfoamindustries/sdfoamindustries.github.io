@@ -1,1 +1,188 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SD Foam Industries</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(0, 64, 128, 0.8);
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        header h1 {
+            color: white;
+            font-size: 24px;
+            margin-left: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            display: none;
+            min-height: 100vh;
+            padding: 100px 20px 40px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow: 1px 1px 4px black;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: #008000;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .pdf-link:hover {
+            background: #005900;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .contact-info a {
+            color: #ffdd57;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div style="display: flex; align-items: center;">
+        <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+        <h1>S D Foam Industries</h1>
+    </div>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('about')">About</a>
+        <a onclick="showSection('services')">Services</a>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="active" style="background-image: url('assets/background_home.jpg');">
+    <div class="content-box">
+        <h2>Welcome to SD Foam Industries</h2>
+        <p>We are a leading manufacturer of high-quality PU foam and mattresses, providing comfort and durability for your perfect sleep. Our products are trusted across India for their exceptional quality and performance. Explore our range and experience the difference.</p>
+    </div>
+</section>
+
+<section id="about" style="background-image: url('assets/background_about.jpg');">
+    <div class="content-box">
+        <h2>About Us</h2>
+        <p>SD Foam Industries specializes in premium PU foam and mattress manufacturing. Our foam products are crafted with advanced technology, ensuring superior comfort, breathability, and long-lasting support. Whether you need foam for home furniture, industrial use, or luxury bedding, we deliver quality that exceeds expectations.</p>
+    </div>
+</section>
+
+<section id="services" style="background-image: url('assets/background_services.jpg');">
+    <div class="content-box">
+        <h2>Our Services</h2>
+        <ul>
+            <li>All India Delivery Network</li>
+            <li>Premium PU Foam & Mattress Manufacturing</li>
+            <li>Custom Size & Design Solutions</li>
+            <li>Superior Product Quality & Testing</li>
+            <li>Excellent Customer Goodwill & Support</li>
+        </ul>
+    </div>
+</section>
+
+<section id="gallery" style="background-image: url('assets/background_gallery.jpg');">
+    <div class="content-box">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="assets/image1.jpg" alt="Gallery Image 1" />
+            <img src="assets/image2.jpg" alt="Gallery Image 2" />
+            <img src="assets/image3.jpg" alt="Gallery Image 3" />
+            <img src="assets/image4.jpg" alt="Gallery Image 4" />
+            <img src="assets/image5.jpg" alt="Gallery Image 5" />
+        </div>
+        <a href="assets/catalogue.pdf" class="pdf-link" target="_blank">Download Our Catalogue (PDF)</a>
+    </div>
+</section>
+
+<section id="contact" style="background-image: url('assets/background_contact.jpg');">
+    <div class="content-box contact-info">
+        <h2>Contact Us</h2>
+        <p><strong>Address:</strong> Mangala to Sahidawali Road, Village Mangala, Sirsa‑125055 (Haryana)</p>
+        <p><strong>Email:</strong> <a href="mailto:sdfoamindustries@gmail.com">sdfoamindustries@gmail.com</a></p>
+        <p><strong>Office:</strong> <a href="tel:8950496914">8950496914</a> | <a href="https://wa.me/918950496914" target="_blank">WhatsApp</a></p>
+        <p><strong>Mr. Deepak Kumar:</strong> <a href="tel:8571042210">8571042210</a> | <a href="https://wa.me/918571042210" target="_blank">WhatsApp</a></p>
+        <p><strong>GM Mr. Dinesh Giri:</strong> <a href="tel:8368926021">8368926021</a> | <a href="https://wa.me/918368926021" target="_blank">WhatsApp</a></p>
+        <p><strong>Sr. Salesman Mr. Pawan:</strong> <a href="tel:7447683905">7447683905</a> | <a href="https://wa.me/917447683905" target="_blank">WhatsApp</a></p>
+    </div>
+</section>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
