@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: url('https://images.unsplash.com/photo-1601933470928-c1e0b79d61f6?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1616567210987-95c1c80d9d34?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
@@ -32,9 +32,19 @@
             top: 0;
             z-index: 1000;
         }
-        header img {
-            max-width: 120px;
+        header .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        header .logo-title img {
+            max-width: 80px;
             height: auto;
+            margin-right: 15px;
+        }
+        header .logo-title span {
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
         nav a {
             color: white;
@@ -114,7 +124,10 @@
 <body>
 
 <header>
-    <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+    <div class="logo-title">
+        <img src="assets/logo.png" alt="SD Foam Industries Logo" />
+        <span>S D FOAM INDUSTRIES</span>
+    </div>
     <nav>
         <a href="#home">Home</a>
         <a href="#contact">Contact</a>
